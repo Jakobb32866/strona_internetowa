@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt · FormNest</title>
+<meta name="description" content="Umów spotkanie, na którym pokażemy, jak działa FormNest. kontakt@formnest.pl">
+<meta property="og:title" content="Kontakt · FormNest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta name="theme-color" content="#EEF0EF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="brand" href="index.html" aria-label="FormNest, strona główna"><svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2.6" fill="#2E9150"/></svg>FormNest</a>
+    <nav class="menu" id="menu" aria-label="Główna nawigacja">
+      <a href="produkt.html">Produkt</a>
+      <a href="prezentacja/index.html">Prezentacja</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+    <a class="btn btn-sm top-cta" href="#zgloszenie">Umów spotkanie</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="tresc">
+  <section class="contact-page" id="zgloszenie">
+    <div class="wrap contact">
+      <div class="contact-main">
+        <h1>Umów spotkanie</h1>
+        <p class="lead">Pokażemy, jak działa FormNest, i odpowiemy na Państwa pytania. Wystarczy zostawić dane kontaktowe, a zaproponujemy termin. Można też napisać bezpośrednio na adres <a href="mailto:kontakt@formnest.pl">kontakt@formnest.pl</a>.</p>
+        <form class="form" id="meeting-form">
+          <div class="form-row">
+            <div><label for="f-name">Imię i nazwisko</label><input type="text" id="f-name" name="name" autocomplete="name" required></div>
+            <div><label for="f-company">Firma</label><input type="text" id="f-company" name="company" autocomplete="organization" required></div>
+          </div>
+          <div class="form-row">
+            <div><label for="f-mail">E-mail</label><input type="email" id="f-mail" name="email" autocomplete="email" required></div>
+            <div><label for="f-tel">Telefon</label><input type="tel" id="f-tel" name="tel" autocomplete="tel" required></div>
+          </div>
+          <fieldset class="choice">
+            <legend>Preferowana forma kontaktu</legend>
+            <div class="choice-opts">
+              <label><input type="radio" name="pref" value="SMS" required><span>SMS</span></label>
+              <label><input type="radio" name="pref" value="E-mail"><span>E-mail</span></label>
+              <label><input type="radio" name="pref" value="Telefonicznie"><span>Telefonicznie</span></label>
+            </div>
+          </fieldset>
+          <div>
+            <label for="f-msg">Wiadomość <span>(opcjonalnie)</span></label>
+            <textarea id="f-msg" name="msg"></textarea>
+          </div>
+          <div class="form-trap" aria-hidden="true"><label for="f-honey">Nie wypełniać</label><input type="text" id="f-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
+          <div class="form-foot">
+            <button class="btn" type="submit" id="f-send">Wyślij</button>
+          </div>
+          <div class="form-done" id="form-done" role="status" hidden></div>
+        </form>
+      </div>
+
+      <figure class="contact-art">
+        <div class="build" id="build" aria-hidden="true"></div>
+        <figcaption>
+          <b class="build-count" id="build-count">Zamontowano 0 z 116 elementów</b>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2.6" fill="#2E9150"/></svg>FormNest</a>
+      <p>Aplikacja do montażu elementów prefabrykowanych.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Stopka"><a href="produkt.html">Produkt</a><a href="prezentacja/index.html">Prezentacja</a><a href="kontakt.html">Kontakt</a></nav>
+    <p><a href="mailto:kontakt@formnest.pl">kontakt@formnest.pl</a></p>
+    <p class="foot-copy">© 2026 FormNest</p>
+  </div>
+</footer>
+
+<script src="js/ui.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

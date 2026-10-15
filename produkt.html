@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produkt · FormNest</title>
+<meta name="description" content="FormNest składa się z aplikacji mobilnej do pracy na budowie i aplikacji desktopowej do zarządzania projektami i planami. Obie korzystają z tych samych danych.">
+<meta property="og:title" content="Produkt · FormNest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta name="theme-color" content="#EEF0EF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="brand" href="index.html" aria-label="FormNest, strona główna"><svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2.6" fill="#2E9150"/></svg>FormNest</a>
+    <nav class="menu" id="menu" aria-label="Główna nawigacja">
+      <a href="produkt.html" aria-current="page">Produkt</a>
+      <a href="prezentacja/index.html">Prezentacja</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <a class="btn btn-sm top-cta" href="kontakt.html">Umów spotkanie</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="tresc">
+  <header class="page-head">
+    <div class="wrap">
+      <h1>Aplikacja mobilna i desktopowa</h1>
+      <p class="lead">FormNest składa się z dwóch aplikacji, które korzystają z tych samych danych. Mobilna służy do pracy na budowie, desktopowa do zarządzania projektami i planami. Element oznaczony w telefonie od razu widać na komputerze.</p>
+    </div>
+  </header>
+
+  <section class="sec sec-alt" id="mobilna">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Aplikacja mobilna</h2>
+        <p>Działa na telefonach z systemem iOS i Android. Po zalogowaniu użytkownik widzi tylko te projekty, do których ma dostęp.</p>
+      </header>
+      <div class="phones">
+        <figure>
+          <div data-mock="m-login" role="img" aria-label="Ekran logowania"></div>
+          <figcaption>Logowanie kodem QR albo loginem i hasłem</figcaption>
+        </figure>
+        <figure>
+          <div data-mock="m-projects" role="img" aria-label="Lista projektów"></div>
+          <figcaption>Lista projektów, do których użytkownik ma dostęp</figcaption>
+        </figure>
+        <figure>
+          <div data-mock="m-scan" role="img" aria-label="Skanowanie etykiety elementu"></div>
+          <figcaption>Odczyt kodu z etykiety elementu</figcaption>
+        </figure>
+        <figure>
+          <div data-mock="m-plan" role="img" aria-label="Plan z zaznaczonym elementem"></div>
+          <figcaption>Plan przybliżony do zeskanowanego elementu</figcaption>
+        </figure>
+      </div>
+      <div class="prose-cols">
+        <p>Skaner odczytuje kod QR lub kod kreskowy z etykiety, a aplikacja od razu otwiera plan właściwej kondygnacji i zaznacza na nim element. Gdy etykieta jest nieczytelna, kod można wpisać ręcznie. Jeśli ten sam kod występuje na kilku planach, aplikacja zapyta, który z nich otworzyć.</p>
+        <p>Zamontowany element oznacza się jednym dotknięciem. Aplikacja zapisuje datę i godzinę montażu, a pomyłkowe oznaczenie można cofnąć. Raz pobrany plan zostaje w pamięci telefonu, dzięki czemu kolejne otwarcie trwa krócej.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="desktopowa">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Aplikacja desktopowa</h2>
+        <p>W aplikacji desktopowej zakłada się projekty, wczytuje plany i zarządza dostępem użytkowników. Poniżej można przejrzeć jej główne ekrany.</p>
+      </header>
+      <div class="tour" data-tabs id="tour">
+        <div class="seg" role="tablist" aria-label="Ekrany aplikacji desktopowej">
+          <button type="button" role="tab" id="tt-0" aria-controls="tc-0">Dashboard</button>
+          <button type="button" role="tab" id="tt-1" aria-controls="tc-1">Projekty</button>
+          <button type="button" role="tab" id="tt-2" aria-controls="tc-2">Edytor planu</button>
+          <button type="button" role="tab" id="tt-3" aria-controls="tc-3">Użytkownicy</button>
+          <button type="button" role="tab" id="tt-4" aria-controls="tc-4">Archiwum</button>
+        </div>
+        <div class="tour-win" id="tour-win" aria-hidden="true"></div>
+        <p class="tour-cap" role="tabpanel" id="tc-0" aria-labelledby="tt-0">Dashboard pokazuje liczbę aktywnych projektów, postęp montażu we wszystkich budowach i ostatnio aktualizowane projekty.</p>
+        <p class="tour-cap" role="tabpanel" id="tc-1" aria-labelledby="tt-1" hidden>Lista prowadzonych budów. W każdym projekcie są plany kondygnacji oraz osoby, które mają do niego dostęp.</p>
+        <p class="tour-cap" role="tabpanel" id="tc-2" aria-labelledby="tt-2" hidden>Plan z naniesionymi elementami. Element można wyszukać po kodzie, a w razie potrzeby dodać, przesunąć lub usunąć.</p>
+        <p class="tour-cap" role="tabpanel" id="tc-3" aria-labelledby="tt-3" hidden>Lista kont wraz z rolami użytkowników.</p>
+        <p class="tour-cap" role="tabpanel" id="tc-4" aria-labelledby="tt-4" hidden>Zakończone budowy, oddzielone od bieżących projektów.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-alt" id="plany">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Plany prosto z projektu CAD</h2>
+        <p>Plan kondygnacji wczytuje się bezpośrednio z projektu przygotowanego w programie CAD. Program sam odczytuje z rysunku kody i położenie elementów, więc nie trzeba ich nanosić ręcznie. Na rysunkach testowych z PrefaBCad rozpoznał wszystkie elementy.</p>
+      </header>
+      <figure>
+        <div class="dxf-view" id="dxf-view">
+          <div class="dxf-before"></div>
+          <div class="dxf-after"></div>
+          <div class="dxf-handle"><span aria-hidden="true">‹ ›</span></div>
+          <input type="range" min="0" max="100" value="50" step="1" aria-label="Porównanie: rysunek z programu CAD i plan po wczytaniu do FormNest">
+        </div>
+        <figcaption class="dxf-tags">
+          <div><b>Rysunek z programu CAD</b><span>opisy elementów na rysunku</span></div>
+          <div><b>Po wczytaniu do FormNest</b><span>każdy element ma znacznik z kodem</span></div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band is-short">
+    <div class="wrap band-in">
+      <h2>Zapraszamy na prezentację</h2>
+      <div class="band-side">
+        <p>Podczas prezentacji pokażemy na przykładowym rysunku, jak program rozpoznaje elementy.</p>
+        <a class="btn btn-yel" href="kontakt.html">Umów spotkanie</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2.6" fill="#2E9150"/></svg>FormNest</a>
+      <p>Aplikacja do montażu elementów prefabrykowanych.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Stopka"><a href="produkt.html">Produkt</a><a href="prezentacja/index.html">Prezentacja</a><a href="kontakt.html">Kontakt</a></nav>
+    <p><a href="mailto:kontakt@formnest.pl">kontakt@formnest.pl</a></p>
+    <p class="foot-copy">© 2026 FormNest</p>
+  </div>
+</footer>
+
+<script src="js/ui.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

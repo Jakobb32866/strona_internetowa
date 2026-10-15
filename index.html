@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FormNest · aplikacja do montażu prefabrykatów</title>
+<meta name="description" content="Wystarczy zeskanować etykietę prefabrykatu, a FormNest pokaże na planie, gdzie należy go zamontować. Montaż idzie szybciej, a o pomyłkę jest znacznie trudniej.">
+<meta property="og:title" content="FormNest · aplikacja do montażu prefabrykatów">
+<meta property="og:description" content="Wystarczy zeskanować etykietę prefabrykatu, a FormNest pokaże na planie, gdzie należy go zamontować.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta name="theme-color" content="#EEF0EF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="brand" href="index.html" aria-label="FormNest, strona główna"><svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2.6" fill="#2E9150"/></svg>FormNest</a>
+    <nav class="menu" id="menu" aria-label="Główna nawigacja">
+      <a href="produkt.html">Produkt</a>
+      <a href="prezentacja/index.html">Prezentacja</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <a class="btn btn-sm top-cta" href="kontakt.html">Umów spotkanie</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="tresc">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>Każdy prefabrykat na swoim miejscu</h1>
+        <p class="lead">Wystarczy zeskanować etykietę prefabrykatu, a FormNest pokaże na planie, gdzie należy go zamontować. Montaż idzie szybciej, a o pomyłkę jest znacznie trudniej.</p>
+        <div class="actions">
+          <a class="btn" href="kontakt.html">Umów spotkanie</a>
+          <a class="link" href="#demo">Wypróbuj</a>
+        </div>
+      </div>
+      <div data-mock="hero" role="img" aria-label="Aplikacja desktopowa z planem kondygnacji +1 i telefon, na którym zaznaczony jest element W_01_627S"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-alt" id="demo">
+    <div class="wrap demo">
+      <div class="demo-copy">
+        <h2>Wypróbuj na przykładowym planie</h2>
+        <p>Wystarczy wybrać etykietę lub wpisać kod elementu, a aplikacja pokaże jego miejsce na planie kondygnacji. Po montażu element oznacza się jednym dotknięciem.</p>
+        <p class="demo-k" id="demo-k">Przykładowe etykiety</p>
+        <div class="demo-labels" role="group" aria-labelledby="demo-k"></div>
+        <form class="demo-form" id="demo-form" novalidate>
+          <label for="demo-code">Kod elementu</label>
+          <div class="demo-row">
+            <input type="text" id="demo-code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="np. W_01_627S">
+            <button class="btn btn-sm" type="submit">Pokaż na planie</button>
+          </div>
+          <p class="demo-msg" id="demo-msg" aria-live="polite"></p>
+        </form>
+        <button class="link demo-reset" type="button" id="demo-reset">Pokaż cały plan</button>
+      </div>
+      <div class="demo-phone" id="demo-phone" role="group" aria-label="Podgląd aplikacji mobilnej"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-apps" id="aplikacje">
+    <div class="wrap apps" data-switch>
+      <div class="apps-side">
+        <h2>Aplikacja mobilna i desktopowa</h2>
+        <p class="apps-intro">Obie aplikacje korzystają z tych samych danych, więc element oznaczony w telefonie od razu widać na komputerze.</p>
+        <div class="switch" role="tablist" aria-label="Aplikacje FormNest">
+          <span class="switch-pill" aria-hidden="true"></span>
+          <button type="button" role="tab" id="sw-m" aria-controls="ap-m">Aplikacja mobilna</button>
+          <button type="button" role="tab" id="sw-d" aria-controls="ap-d">Aplikacja desktopowa</button>
+        </div>
+        <div class="apps-copy">
+          <div class="app-pane" role="tabpanel" id="ap-m" aria-labelledby="sw-m">
+            <p>Służy do pracy na budowie. Po zeskanowaniu etykiety wyszukuje miejsce elementu na planie kondygnacji. Montaż oznacza się jednym dotknięciem, a do logowania wystarczy kod QR.</p>
+            <a class="link" href="produkt.html#mobilna">Więcej o aplikacji mobilnej</a>
+          </div>
+          <div class="app-pane" role="tabpanel" id="ap-d" aria-labelledby="sw-d">
+            <p>Służy do zarządzania projektami i planami. Plany wczytuje się prosto z projektu CAD, a na bieżąco widać, które elementy są już zamontowane i kiedy.</p>
+            <a class="link" href="produkt.html#desktopowa">Więcej o aplikacji desktopowej</a>
+          </div>
+        </div>
+      </div>
+      <div class="apps-stage" aria-hidden="true">
+        <div class="app-vis is-phone"><div data-mock="crew"></div></div>
+        <div class="app-vis is-desk"><div data-mock="sync"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-alt" id="porownanie">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Co zmienia FormNest</h2>
+      </header>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead><tr><th scope="col"><span class="sr">Obszar</span></th><th scope="col">Dokumentacja papierowa</th><th scope="col" class="is-fn">FormNest</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Szukanie miejsca elementu</th><td data-label="Dokumentacja papierowa">Kod z etykiety trzeba odszukać na rysunku, porównując go z opisami kolejnych elementów. Według naszych szacunków zajmuje to średnio prawie 7 minut.</td><td class="is-fn" data-label="FormNest">Po zeskanowaniu etykiety aplikacja od razu pokazuje element na planie. Trwa to kilka sekund.</td></tr>
+            <tr><th scope="row">Podobne elementy</th><td data-label="Dokumentacja papierowa">Prefabrykaty, które różnią się szczegółem, łatwo pomylić. Błąd często wychodzi na jaw dopiero po czasie.</td><td class="is-fn" data-label="FormNest">Każdy prefabrykat ma swój kod i jedno właściwe miejsce na planie.</td></tr>
+            <tr><th scope="row">Postęp montażu</th><td data-label="Dokumentacja papierowa">Informacja o postępie prac dociera z budowy z opóźnieniem.</td><td class="is-fn" data-label="FormNest">Zamontowany element od razu zmienia kolor na planie w aplikacji desktopowej.</td></tr>
+            <tr><th scope="row">Data montażu</th><td data-label="Dokumentacja papierowa">Trzeba ją zapisać ręcznie, a później odszukać w notatkach.</td><td class="is-fn" data-label="FormNest">Aplikacja zapisuje ją sama w chwili oznaczenia elementu.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="after-table">Źle zamontowany element trzeba zdjąć i zamontować ponownie, co oznacza dodatkową pracę dźwigu i przestój na budowie. Szacujemy, że jedna taka pomyłka kosztuje od 5 700 do 36 400 zł.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="start">
+    <div class="wrap start">
+      <div class="start-deck">
+        <h2>Prezentacja</h2>
+        <a class="deck-thumb" href="prezentacja/index.html" aria-label="Otwórz prezentację FormNest">
+          <iframe src="prezentacja/index.html#2" title="Pierwszy slajd prezentacji FormNest" tabindex="-1" aria-hidden="true" loading="lazy"></iframe>
+        </a>
+        <p>W prezentacji pokazujemy, jak FormNest przyspiesza montaż i pomaga uniknąć pomyłek.</p>
+        <a class="link" href="prezentacja/index.html">Otwórz prezentację</a>
+      </div>
+      <div class="start-steps">
+        <h2>Jak wygląda wdrożenie</h2>
+        <p>Zwykle zajmuje około tygodnia.</p>
+        <ol class="steps">
+          <li>Zakładamy konto Państwa firmy i pierwszy projekt.</li>
+          <li>Państwa zespół wczytuje plany kondygnacji do aplikacji desktopowej.</li>
+          <li>Zakładamy konta użytkowników i przygotowujemy kody QR do logowania.</li>
+          <li>Na budowie pokazujemy, jak korzystać z aplikacji mobilnej. Zajmuje to około pół godziny.</li>
+          <li>Od tego momentu każdy montowany element jest skanowany i oznaczany w aplikacji.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap band-in">
+      <h2>Chętnie pokażemy Państwu FormNest</h2>
+      <div class="band-side">
+        <p>Porozmawiajmy o tym, jak FormNest może pomóc w Państwa firmie.</p>
+        <a class="btn btn-yel" href="kontakt.html">Umów spotkanie</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2.6" fill="#2E9150"/></svg>FormNest</a>
+      <p>Aplikacja do montażu elementów prefabrykowanych.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Stopka"><a href="produkt.html">Produkt</a><a href="prezentacja/index.html">Prezentacja</a><a href="kontakt.html">Kontakt</a></nav>
+    <p><a href="mailto:kontakt@formnest.pl">kontakt@formnest.pl</a></p>
+    <p class="foot-copy">© 2026 FormNest</p>
+  </div>
+</footer>
+
+<script src="js/ui.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
