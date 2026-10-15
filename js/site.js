@@ -160,6 +160,8 @@
       if (e) sheetState(pl, e);
       pl.sheet.style.transform = e ? "none" : "translateY(105%)"; pl.btn.tabIndex = e ? 0 : -1;
       labs.forEach(b => b.setAttribute("aria-pressed", b.el === e));
+      // on phones the plan sits above the controls: bring it into view
+      if (e && innerWidth < 1000) demo.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "nearest" });
     };
     const toggle = () => { if (!sel) return; sel.inst = !sel.inst; sel.at = sel.inst ? stamp() : null; sheetState(pl, sel); paint(); count(); };
     pl.btn.addEventListener("click", toggle);
@@ -352,6 +354,8 @@
         send.textContent = "Wysłano";
         say("<b>Dziękujemy, wiadomość została wysłana.</b>Odezwiemy się, żeby ustalić termin spotkania.");
         if (building) building.finish();
+        // on phones the building is above the form: show the roof going up
+        if (bh && innerWidth < 1000) bh.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "center" });
       } catch (err) {
         send.disabled = false; send.textContent = "Wyślij";
         say('<b>Nie udało się wysłać wiadomości.</b>Prosimy spróbować ponownie albo napisać na adres <a href="mailto:kontakt@formnest.pl">kontakt@formnest.pl</a>.', true);

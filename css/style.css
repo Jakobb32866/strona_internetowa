@@ -63,7 +63,7 @@ h3{font-size:clamp(21px,1.8vw,25px);font-stretch:90%;line-height:1.2}
 @media (max-width:379px){.top-cta{display:none}.menu-btn{margin-left:auto}}
 
 /* ---------- sections ---------- */
-.sec{padding:clamp(72px,8vw,120px) 0}
+.sec{padding:clamp(56px,8vw,120px) 0}
 .sec-alt{background:var(--alt)}
 .sec-head{max-width:820px;margin-bottom:clamp(36px,4.5vw,60px)}
 .sec-head p{margin-top:16px;font-size:clamp(18px,1.35vw,20px);color:var(--ink2);max-width:38em}
@@ -115,6 +115,18 @@ h3{font-size:clamp(21px,1.8vw,25px);font-stretch:90%;line-height:1.2}
 .demo-phone .act:focus-visible{outline:3px solid var(--yel);outline-offset:2px}
 .demo-phone .mb-plan g{cursor:pointer}
 @media (min-width:1000px){.demo{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px}}
+/* phones: the plan sits right under the intro, above the labels and the code field that drive it */
+@media (max-width:999px){
+  .demo{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .demo-copy{display:contents}
+  .demo-copy>h2{order:1}
+  .demo-copy>p:not(.demo-k){order:2}
+  .demo-phone{order:3;max-width:230px;margin:28px auto 0}
+  .demo-k{order:4}
+  .demo-labels{order:5}
+  .demo-form{order:6}
+  .demo-reset{order:7;align-self:flex-start}
+}
 
 /* ---------- tabs (segmented) ---------- */
 .seg{display:inline-flex;max-width:100%;overflow-x:auto;border:1.5px solid var(--ink);border-radius:6px;scrollbar-width:none}
@@ -240,6 +252,7 @@ h3{font-size:clamp(21px,1.8vw,25px);font-stretch:90%;line-height:1.2}
 .dxf-tags b{font-weight:600}
 .dxf-tags span{display:block;color:var(--ink2)}
 .dxf-tags>div:last-child{text-align:right}
+@media (max-width:599px){.dxf-tags{flex-direction:column;gap:10px}.dxf-tags>div:last-child{text-align:left}}
 
 
 
@@ -291,6 +304,15 @@ input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus,textarea:fo
 /* honeypot for bots, kept out of sight and out of the tab order */
 .form-trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .contact-art{margin:0}
+/* phones: the building stands between the intro and the form, so it is seen before typing starts */
+@media (max-width:999px){
+  .contact{display:flex;flex-direction:column;gap:0}
+  .contact-main{display:contents}
+  .contact-main h1{order:1}
+  .contact-main .lead{order:2}
+  .contact-art{order:3;width:100%;max-width:340px;margin:24px auto 0}
+  .form{order:4}
+}
 .build{position:relative;aspect-ratio:780/600;user-select:none}
 .build svg{display:block;width:100%;height:100%;overflow:visible}
 .build polygon{transition:fill .15s ease}
