@@ -228,6 +228,7 @@ h3{font-size:clamp(21px,1.8vw,25px);font-stretch:90%;line-height:1.2}
 .foot a{color:var(--bg);text-underline-offset:4px}
 .foot-nav a{text-decoration:none}
 .foot-nav a:hover{text-decoration:underline}
+.foot-contact{display:grid;gap:4px}
 @media (min-width:900px){.foot-in{grid-template-columns:minmax(0,4fr) auto auto auto;align-items:center;gap:40px}.foot-copy{text-align:right}}
 
 /* ---------- product page ---------- */

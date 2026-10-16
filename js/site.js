@@ -358,7 +358,7 @@
         if (bh && innerWidth < 1000) bh.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "center" });
       } catch (err) {
         send.disabled = false; send.textContent = "Wyślij";
-        say('<b>Nie udało się wysłać wiadomości.</b>Prosimy spróbować ponownie albo napisać na adres <a href="mailto:kontakt@formnest.pl">kontakt@formnest.pl</a>.', true);
+        say('<b>Nie udało się wysłać wiadomości.</b>Prosimy spróbować ponownie, napisać na adres <a href="mailto:kontakt@formnest.pl">kontakt@formnest.pl</a> albo zadzwonić pod numer <a href="tel:+48510502354">+48 510 502 354</a>.', true);
       }
     });
   }
