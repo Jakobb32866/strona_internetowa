@@ -29,6 +29,8 @@ Potem http://localhost:4173. Pliki otwarte bezpośrednio z dysku też działają
 - `css/style.css` – style strony, na końcu style makiet aplikacji.
 - `js/ui.js` – makiety aplikacji desktopowej i mobilnej, generator planu.
 - `js/site.js` – makiety na stronach (`data-mock`), demo planu, zakładki, przegląd aplikacji desktopowej, suwak rysunku, formularz, menu.
+- `sitemap.xml` – mapa witryny dla Google Search Console. Przy dodaniu podstrony trzeba dopisać jej adres, a przy większej zmianie treści zaktualizować `lastmod`.
+- `robots.txt` – pozwala indeksować całą stronę i wskazuje mapę witryny.
 
 ## Do uzupełnienia przed publikacją
 
