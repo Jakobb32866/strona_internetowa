@@ -367,9 +367,12 @@
   const top = $("#top"), mark = () => top.classList.toggle("is-scrolled", scrollY > 4);
   addEventListener("scroll", mark, { passive: true }); mark();
   const menu = $("#menu"), mb = $(".menu-btn");
-  const openMenu = o => { menu.classList.toggle("is-open", o); mb.setAttribute("aria-expanded", o); mb.textContent = o ? "Zamknij" : "Menu"; };
+  const openMenu = o => { menu.classList.toggle("is-open", o); mb.setAttribute("aria-expanded", o); };
   mb.addEventListener("click", () => openMenu(!menu.classList.contains("is-open")));
   menu.addEventListener("click", e => { if (e.target.closest("a")) openMenu(false); });
+  // a tap anywhere outside the header closes the open menu
+  document.addEventListener("click", e => { if (menu.classList.contains("is-open") && !top.contains(e.target)) openMenu(false); });
+  addEventListener("resize", () => { if (innerWidth >= 720 && menu.classList.contains("is-open")) openMenu(false); }, { passive: true });
   addEventListener("keydown", e => { if (e.key === "Escape" && menu.classList.contains("is-open")) { openMenu(false); mb.focus(); } });
 
   /* ---------- Polish typesetting: no one-letter words or short numbers at line ends ---------- */

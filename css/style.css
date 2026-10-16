@@ -50,7 +50,11 @@ h3{font-size:clamp(21px,1.8vw,25px);font-stretch:90%;line-height:1.2}
 .menu a{padding:8px 12px;border-radius:5px;font-size:16px;text-decoration:none;transition:background-color .15s ease}
 .menu a:hover{background:var(--alt)}
 .menu a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:6px}
-.menu-btn{display:none;min-height:42px;padding:0 14px;border:1.5px solid var(--ink);border-radius:5px;background:none;font:600 15px var(--font);color:var(--ink);cursor:pointer}
+.menu-btn{display:none;min-height:42px;padding:0 14px;border:1.5px solid var(--ink);border-radius:5px;background:none;font:600 15px var(--font);color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent}
+/* both labels share one cell, so the button keeps the width of the longer one */
+.menu-btn span{grid-area:1/1}
+.menu-btn[aria-expanded="true"] span:first-child,.menu-btn[aria-expanded="false"] span:last-child{visibility:hidden}
+.brand,.top-cta,.menu-btn{flex-shrink:0}
 @media (max-width:719px){
   .menu{display:none;position:absolute;top:var(--top);left:0;right:0;flex-direction:column;gap:0;padding:4px var(--gut) 18px;background:var(--bg);border-bottom:1px solid var(--hair)}
   .menu.is-open{display:flex}
@@ -58,9 +62,10 @@ h3{font-size:clamp(21px,1.8vw,25px);font-stretch:90%;line-height:1.2}
   .menu a:first-child{border-top:0}
   .menu a:hover{background:none}
   .top-cta{margin-left:auto}
-  .menu-btn{display:inline-flex;align-items:center}
+  .menu-btn{display:inline-grid;place-items:center}
 }
-@media (max-width:379px){.top-cta{display:none}.menu-btn{margin-left:auto}}
+/* logo + "Umów spotkanie" + menu button need ~425px; below that the CTA goes (Kontakt is in the menu) */
+@media (max-width:439px){.top-cta{display:none}.menu-btn{margin-left:auto}}
 
 /* ---------- sections ---------- */
 .sec{padding:clamp(56px,8vw,120px) 0}
